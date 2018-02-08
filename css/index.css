@@ -560,12 +560,12 @@
 	top: 146px;
 	color: #fff;
 	font-size: 28px;
-	background-color: rgba(0, 0, 0, 0.6)
+/* 	background-color: rgba(0, 0, 0, 0.6) */
 }
-.bofangtubiao:hover{
+/* :hover{
 	cursor: pointer;
-	background-color: #ff6700;
-}
+	color: #ff6700;
+} */
 .shipinzhanshi_4{
 	margin-right: 0;
 }
@@ -685,6 +685,9 @@
 .shipin1{
 	width: 296px;
 	height: 180px;
+}
+.bofangtubiao:hover{
+	color: #ff6700;
 }
 .neirong2{
 	border-top-color: #83c44e;
@@ -1276,7 +1279,7 @@
 }
 .sousuoanniu{
 	
-	/* border: 0; */
+	border: 0;
 	font-family: 'iconfont';
 	color: #616161;
 	line-height: 48px;
@@ -1288,7 +1291,10 @@
 	height: 48px;
 	text-align: center;	
 	/* cursor: pointer; */
-	background-color: #fff;
+	background-color:transparent;
+}
+.sousuoanniu:hover{
+	background-color: #ff6700;
 }
 .sousuoshuru{
 	width: 240px;
@@ -1296,6 +1302,6 @@
 	border: 0px solid #ff6700;
 	background-color: transparent;
 }
-input:focus{
+/* input:focus{
 	 outline:solid 2px #ff6700;
-}
+} */
