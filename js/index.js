@@ -74,7 +74,7 @@
 // banner效果
 
 
-//单品效果
+// 单品效果
 {
     const prev = document.querySelector(".mingxing_anniu1");
     const next = document.querySelector(".mingxing_anniu2");
@@ -109,7 +109,7 @@
 }
 
 
-//选项卡打包效果
+// 选项卡打包效果
 {
     function content(parent) {
         const types = parent.querySelectorAll(".types");
@@ -169,3 +169,161 @@
 //         console.log(contentList);
 //
 // }
+
+
+
+
+//推荐效果
+{
+    const prev = document.querySelector(".mingxing_anniu3");
+    const next = document.querySelector(".mingxing_anniu4");
+    const inner = document.querySelector(".tuijianbeijing");
+    console.log(prev, next);
+    console.log(inner);
+    let n = 0;
+    next.onclick = (function () {
+        n++;
+        prev.classList.remove("disable");
+        if (n === 3) {
+            this.classList.add("disable");
+        }
+        if (n === 4) {
+            n = 3;
+            return;
+        }
+        inner.style.marginLeft = -1226 * n + "px";
+    });
+    prev.onclick = function () {
+        n--;
+        next.classList.remove("disable");
+        if (n === 0) {
+            prev.classList.add("disable");
+        }
+        if (n === -1) {
+            n = 0;
+            return;
+        }
+        inner.style.marginLeft = -1226 * n + "px";
+    }
+}
+
+
+
+//内容效果
+{
+    // console.log(prev,next,inner,pag);
+    function contmove(father) {
+        let  prev=father.querySelector(".prev1");
+        let  next=father.querySelector(".next1");
+        let  inner=father.querySelector(".dabawang");
+        let  content=father.querySelectorAll(".imgbox-content");
+        let pag=father.querySelectorAll(".pager2");
+        let  n=0;
+
+        next.onclick=function () {
+            n++;
+            if (n===content.length){
+                n=content.length-1;
+                return;
+            }
+            inner.style.marginLeft=n*-296+"px";
+            pag[n].classList.add("active2");
+            pag[n-1].classList.remove("active2");
+        };
+        prev.onclick=function () {
+            n--;
+            if (n<0){
+                n=0;
+            }
+            inner.style.marginLeft=n*-296+"px";
+            pag[n].classList.add("active2");
+            pag[n+1].classList.remove("active2");
+        };
+        let obj=pag[0];
+        pag.forEach(function (ele,index){
+            ele.onclick=function () {
+                obj.classList.remove("active2");
+                ele.classList.add("active2");
+                obj=ele;
+                inner.style.marginLeft=index*-296+"px";
+                n=index;
+            }
+        })
+    }
+
+    var neirong1=document.querySelectorAll(".neirong1");
+    neirong1.forEach(function (ele) {
+        contmove(ele);
+    })
+}
+
+
+
+
+
+
+//导航效果
+{
+    let daomore=document.querySelector(".wenzimore");
+    let daotitle=document.querySelector(".wenzi");
+    // let dao=document.querySelector(".daohang")
+    // console.log(daomore,daotitle)
+    daotitle.onmouseenter=function () {
+        daomore.style.height=300+"px";
+
+    };
+    daotitle.onmouseleave=function () {
+        daomore.style.height=0;
+    };
+    daomore.onmouseleave=function () {
+        daomore.style.height=0;
+    };
+        //
+
+
+    let listmin = document.querySelectorAll(".wenzi span");
+    let listcont = document.querySelectorAll(".wenzimoree");
+    console.log(listmin, listcont);
+    listmin.forEach(function (val,index) {
+        val.onmouseenter=function () {
+            for (i=0;i<listcont.length;i++){
+                listmin[i].classList.remove("active44");
+                listcont[i].classList.remove("active44");
+            }
+            this.classList.add("active44");
+            listcont[index].classList.add("active44");
+        }
+    })
+}
+
+//BANNER导航栏效果
+{
+    let ulist = document.querySelectorAll(".banner_daohang li");
+    let listmore = document.querySelectorAll(".listmore");
+    console.log(ulist, listmore);
+    ulist.forEach(function (val,index) {
+        val.onmouseenter=function () {
+            for (i=0;i<listmore.length;i++){
+                ulist[i].classList.remove("active33");
+                listmore[i].classList.remove("active333");
+            }
+            this.classList.add("active33");
+            listmore[index].classList.add("active333")
+        }
+        val.onmouseleave=function () {
+            this.classList.remove("active33");
+            listmore[index].classList.remove("active333");
+        }
+    })
+    // ulist.onmouseenter = function () {
+    //     listmore.style.display = "block";
+    //     listmore.style.zIndex = 9999999;
+    // };
+    // ulist.onmouseleave = function () {
+    //     listmore.style.display = "none";
+    //     listmore.style.zIndex = 0;
+    // };
+
+    //
+
+}
