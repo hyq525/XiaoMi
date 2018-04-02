@@ -67,13 +67,12 @@
             flag = true;
         })
     });
-    //      setInterval(function () {
-//
-// },3000);
+
 }
+//
 // banner效果
-
-
+// },3000);
+//      setInterval(function () {
 // 单品效果
 {
     const prev = document.querySelector(".mingxing_anniu1");
@@ -283,8 +282,9 @@
 
     let listmin = document.querySelectorAll(".wenzi span");
     let listcont = document.querySelectorAll(".wenzimoree");
-    console.log(listmin, listcont);
+    // console.log(listmin, listcont);
     listmin.forEach(function (val,index) {
+        console.log(val)
         val.onmouseenter=function () {
             for (i=0;i<listcont.length;i++){
                 listmin[i].classList.remove("active44");
@@ -300,7 +300,7 @@
 {
     let ulist = document.querySelectorAll(".banner_daohang li");
     let listmore = document.querySelectorAll(".listmore");
-    console.log(ulist, listmore);
+    // console.log(ulist, listmore);
     ulist.forEach(function (val,index) {
         val.onmouseenter=function () {
             for (i=0;i<listmore.length;i++){

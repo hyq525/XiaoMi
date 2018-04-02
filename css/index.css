@@ -85,15 +85,26 @@
 	left: 0;
 	right: 0;
 	margin: 0 auto;
-	font-size: 50px;
+	font-size: 12px;
 	text-align: center;
-	line-height: 300px;
 	transition: top .3s linear;
 	display: none;
-	color: red;
 }
-.wenzi .active44{
+.wenzimoree .warp{
+	float: left;
+	width: 204px;
+	height: 234px;
+}
+.warp img{
+	display: block;
+
+	margin: 0 auto;
+}
+.warp p:nth-child(3){
 	color: #ff6700;
+}
+.warp p{
+	padding: 10px 0;
 }
 .wenzimore .active44{
 	height: 300px;
@@ -1255,8 +1266,8 @@
 	padding: 0 30px;
 }
 .listmore{
-	width: 888px;
-	height: 400px;
+	width: 992px ;
+	height: 459px;
 	background-color: #fff;
 	position: absolute;
 	top: 0;
@@ -1264,10 +1275,39 @@
 	left: 234px;
 	display: none;
 	color: darksalmon;
-	font-size: 60px;
-	text-align: center;
-	line-height: 400px;
+	/*text-align: center;*/
 
+}
+.liwarp{
+	float: left;
+	width: 201px;
+	height: 76px;
+	padding: 0 21px;
+	/*padding:0 25px;*/
+	background-color: #fff;
+}
+.banner_yul{
+	width: 248px;
+	height: 459px;
+	float: left;
+	border-top:  1px solid #e0e0e0;
+	background-color: #fff;
+}
+.liwarp img{
+	width: 50px;
+	height: 50px;
+}
+.liwarp span {
+	font-size: 14px;
+	line-height: 76px;
+	color: #333;
+}
+.banneryimg{
+	width: 50px;
+	height: 50px;
+	margin-top: 13px;
+	margin-right: 10px;
+	float: left;
 }
 .active333{
 	display: block;
@@ -1357,6 +1397,7 @@
 .banner_daohang li:hover{
 	background-color: #ff6700;
 	cursor: pointer;
+	color: #fff;
 }
 .banner_anniu:hover{
 	color: #fff;
